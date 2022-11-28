@@ -1,0 +1,49 @@
+.header {
+  font-family: var(--ar-font);
+  display: flex;
+  align-items: center;
+  height: 200px;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0 3rem;
+  background-image: url(../../assets/pattern.png);
+  background-position: left;
+  border-bottom: 0.5rem solid var(--secondry-color);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
+  @media screen and (max-width: 580px) {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+  }
+  h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    flex: 1;
+    @media screen and (max-width: 580px) {
+      font-size: 2rem;
+    }
+    span {
+      font-size: 4rem;
+      @media screen and (max-width: 580px) {
+        font-size: 3rem;
+      }
+    }
+  }
+}
+.img {
+  display: block;
+  width: 120px;
+  position: absolute;
+  top: 3rem;
+  left: 5rem;
+  z-index: 10;
+  @media screen and (max-width: 580px) {
+    top: 5rem;
+    left: 2rem;
+  }
+  img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.8));
+  }
+}

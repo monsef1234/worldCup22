@@ -1,0 +1,61 @@
+.groups {
+  margin: 3rem 0;
+  h1 {
+    font-family: var(--ar-font);
+    border-bottom: 3px solid var(--gray-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+  }
+  .groups-table {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    table {
+      text-transform: capitalize;
+      width: calc(30% - 2rem);
+      text-align: center;
+      box-shadow: 0 0 10px rgb(194, 194, 194, 0.8);
+      // table-layout: fixed;
+      border-collapse: collapse;
+      @media screen and (max-width: 750px) {
+        width: calc(50% - 2rem);
+      }
+      @media screen and (max-width: 580px) {
+        width: 100%;
+      }
+      caption {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 5px;
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+      thead {
+        background-color: var(--secondry-color);
+        color: white;
+      }
+      tbody:not(:last-of-type) {
+        border-bottom: 3px solid var(--gray-color);
+      }
+      .team {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        img {
+          display: block;
+          width: 30px;
+          height: 30px;
+          object-fit: cover;
+          border-radius: 50%;
+        }
+      }
+      td,
+      th {
+        padding: 5px;
+      }
+    }
+  }
+}

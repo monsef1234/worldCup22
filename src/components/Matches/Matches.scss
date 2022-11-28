@@ -1,0 +1,96 @@
+.matches {
+  margin: 3rem 0;
+  h1 {
+    font-family: var(--ar-font);
+    border-bottom: 3px solid var(--gray-color);
+    padding-bottom: 0.5rem;
+  }
+  .matches-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 3rem 0;
+    .match {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: calc(50% - 2rem);
+      height: 100px;
+      border-radius: 3rem;
+      overflow: hidden;
+      text-transform: capitalize;
+      box-shadow: 0 0 5px rgb(0, 0, 0, 0.5);
+      @media screen and (max-width: 895px) {
+        width: 100%;
+      }
+      @media screen and (max-width: 580px) {
+        height: 150px;
+      }
+      .team {
+        width: 140px;
+        max-width: 100%;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--primary-color);
+        height: 100%;
+        gap: 0.5rem;
+        color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+        @media screen and (max-width: 1200px) {
+          width: 100px;
+          padding: 0 1rem;
+        }
+        @media screen and (max-width: 895px) {
+          width: 140px;
+        }
+        @media screen and (max-width: 580px) {
+          width: 100px;
+        }
+        img {
+          display: block;
+          width: 40px;
+          height: 40px;
+          object-fit: cover;
+          border-radius: 50%;
+        }
+        span {
+          font-size: 0.9rem;
+          @media screen and (max-width: 1200px) {
+            font-size: 0.8rem;
+          }
+        }
+      }
+      .stat {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0.5rem;
+        .score {
+          font-size: 1.5rem;
+          font-weight: bold;
+        }
+        .info {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 0.5rem;
+          justify-content: center;
+          span {
+            text-align: center;
+          }
+          span:nth-child(2) {
+            font-size: 2rem;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}
